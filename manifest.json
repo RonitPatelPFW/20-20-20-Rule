@@ -1,0 +1,19 @@
+{
+    "name": "Eye Break Reminder",
+    "description": "Reminder to take often eye breaks",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["alarms", "notifications"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Drink Water Event"
+    },
+    "icons": {
+      "16": "images/eye16.png",
+      "32": "images/eye32.png",
+      "48": "images/eye48.png",
+      "128": "images/eye128.png"
+    }
+  }
