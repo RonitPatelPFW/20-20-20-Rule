@@ -12,17 +12,7 @@ chrome.alarms.onAlarm.addListener(() => {
         }
       ]
     });
-    
 });
-
 chrome.alarms.create({
-  // periodInMinutes: .5
-  when: Date.now()
+  periodInMinutes: 20
 });
-
-// chrome.scripting.executeScript({
-//   files: ['content.js']
-// });
-
-
-

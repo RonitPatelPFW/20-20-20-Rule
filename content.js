@@ -3,7 +3,7 @@ const remind = document.createElement("div");
 remind.innerHTML = `
     <div class='overlay'>
         <span class='text'>
-            Take a break
+            Take a eye break
         </span>
     </div>
 `;
@@ -46,8 +46,8 @@ function showOverlay() {
 function hideOverlay() {
     document.querySelector('.overlay').style.display = 'none';
 }
-showOverlay();
 
 // Hide the overlay when it is clicked
 document.querySelector('.overlay').addEventListener('click', hideOverlay);
 
+setInterval(showOverlay, 1195000)
