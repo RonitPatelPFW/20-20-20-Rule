@@ -1,9 +1,20 @@
-// Add the HTML content to the body
+function displayCSSHTML() {
+    document.querySelector('.overlay').style.display = 'block';
+
+    function removeCSSHTML() {
+        document.querySelector('.overlay').style.display = 'none';
+    }
+
+    setTimeout(removeCSSHTML, 5000)
+}
+
+if(!document.querySelector('.overlay')) {
+    // Add the HTML content to the body
 const remind = document.createElement("div");
 remind.innerHTML = `
     <div class='overlay'>
         <span class='text'>
-            Take a eye break
+            Take an Eye Break
         </span>
     </div>
 `;
@@ -22,7 +33,6 @@ style.innerHTML = `
         bottom: 0;
         background-color: rgba(0,0,0,0.5);
         z-index: 99999;
-        cursor: pointer;
     }
     .text {
         position: absolute;
@@ -34,20 +44,10 @@ style.innerHTML = `
         -ms-transform: translate(-50%,-50%);
     }
 `;
-document.head.appendChild(style);
-document.body.appendChild(remind);
-
-// Function to show the overlay
-function showOverlay() {
-    document.querySelector('.overlay').style.display = 'block';
+    document.head.appendChild(style);
+    document.body.appendChild(remind);
+    displayCSSHTML();
 }
-
-// Function to hide the overlay
-function hideOverlay() {
-    document.querySelector('.overlay').style.display = 'none';
+else {
+    displayCSSHTML();
 }
-
-// Hide the overlay when it is clicked
-document.querySelector('.overlay').addEventListener('click', hideOverlay);
-
-setInterval(showOverlay, 1195000)

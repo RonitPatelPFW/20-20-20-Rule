@@ -1,21 +1,22 @@
 {
     "name": "Eye Break Reminder",
     "description": "Reminder to take eye breaks often",
-    "version": "1.0",
+    "version": "1.1",
     "manifest_version": 3,
-    "permissions": ["alarms", "notifications"],
+    "permissions": [
+      "alarms", 
+      "notifications", 
+      "activeTab", 
+      "scripting"],
     "background": {
       "service_worker": "background.js"
     },
+    "host_permissions": [
+      "https://*/"
+    ],
     "action": {
       "default_title": "Drink Water Event"
     },
-    "content_scripts" : [
-      {
-        "js": ["content.js"],
-        "matches": ["<all_urls>"]
-      }
-    ],
     "icons": {
       "16": "images/eye16.png",
       "32": "images/eye32.png",
